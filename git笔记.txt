@@ -1,0 +1,39 @@
+20190118--git笔记
+
+概念
+本地工作目录------1      
+暂存区------------2
+本地版本库--------3
+远程版本库--------4
+
+指令：
+a:1--add-->2--commit-->3
+b:3---push--->4
+c:3<---pull---4
+
+	git add:将本地文件  增加  到暂存区
+	git commit:将暂存区的内容  提交  到本地仓库（本地分支，默认master分支）
+	git push:将本地仓库的内容  推送  到远程仓库（远程分支）
+	git pull:将远程仓库的内容  拉取  到本地仓库
+	
+安装操作：
+	安装时：其中有一步选择Use git from git bash only，其他默认下一步
+配置path：D:\Program\Git\bin	
+配置git：
+	右键--git bash，配置本地用户名和邮箱
+	git config --global user.name ""
+	git config --global user.email ""
+	本地查看那路径：C:\Users\xuyoujia\.gitconfig
+	或者查看配置指令：git config --list
+
+git统一的托管网站：www.github.com 
+为了在本地和远程仓库进行免密钥登录，可以配置ssh
+配置免密钥登录ssh：	
+	先在本地配置：ssh-keygen -t rsa -C 13517913117@163.com 后面一直回车（在本地生成两个文件，目录：C:\Users\xuyoujia\.ssh）
+	发送给远程：在github中settings--SSH and GPG key---title任意，key中输入公钥（注：后面不能有回车或空格）
+	
+测试能否与远程仓库通信：ssh -T git@github.com
+如果成功：在C:\Users\xuyoujia\.ssh会生成一个文件known_hosts
+如果失败：1、多尝试几次，防止网络原因，2、检测是否有换行符
+
+	
