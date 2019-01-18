@@ -36,4 +36,29 @@ git统一的托管网站：www.github.com
 如果成功：在C:\Users\xuyoujia\.ssh会生成一个文件known_hosts
 如果失败：1、多尝试几次，防止网络原因，2、检测是否有换行符
 
+
+在本地新建git项目：
+	在项目的根目录 右键-git bash ----git init
+	在远程仓库创建项目：生成唯一标识：SSH/HTTPS
+	本地项目与远程项目关联：git remote add origin git@github.com:xuyoujia/gitTest.git
+	
+-----git常见操作--------
+第一次发布项目（本地-->远程）
+1、git add .      //文件到暂存区，“.”为当前文件
+2、git commit -m "注释" //暂存区到本地分支（默认master分支）
+3、git push -u origin master
+
+第一次下载项目（远程-->本地）
+git clone git@github.com:xuyoujia/gitTest.git
+
+更新（远程-本地）
+git pull
+提交（本地-远程）在当前工作目录 右键-git bash
+git add .
+git commit -m "注释"
+git push origin master
+
+
+在eclipse 中的egit使用
+
 	
